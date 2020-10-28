@@ -10,13 +10,13 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dev.m13d.wht.business.data.cache.CacheDataSource
 import dev.m13d.wht.business.data.cache.CacheDataSourceImpl
 import dev.m13d.wht.business.domain.model.Holyday
-import dev.m13d.wht.datasource.cache.database.HolydayDao
-import dev.m13d.wht.datasource.cache.database.HolydayDatabase
-import dev.m13d.wht.datasource.cache.mapper.CacheMapper
-import dev.m13d.wht.datasource.cache.model.HolydayCacheEntity
+import dev.m13d.wht.framework.datasource.cache.database.HolydayDao
+import dev.m13d.wht.framework.datasource.cache.database.HolydayDatabase
+import dev.m13d.wht.framework.datasource.cache.mapper.CacheMapper
+import dev.m13d.wht.framework.datasource.cache.model.HolydayCacheEntity
 import dev.m13d.wht.business.domain.util.EntityMapper
-import dev.m13d.wht.datasource.cache.HolydayDaoService
-import dev.m13d.wht.datasource.cache.HolydayDaoServiceImpl
+import dev.m13d.wht.framework.datasource.cache.HolydayDaoService
+import dev.m13d.wht.framework.datasource.cache.HolydayDaoServiceImpl
 import javax.inject.Singleton
 
 @Module

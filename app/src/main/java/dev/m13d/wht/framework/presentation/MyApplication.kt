@@ -1,4 +1,4 @@
-package dev.m13d.wht.presentation
+package dev.m13d.wht.framework.presentation
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -1,7 +1,7 @@
-package dev.m13d.wht.datasource.cache
+package dev.m13d.wht.framework.datasource.cache
 
-import dev.m13d.wht.datasource.cache.database.HolydayDao
-import dev.m13d.wht.datasource.cache.model.HolydayCacheEntity
+import dev.m13d.wht.framework.datasource.cache.database.HolydayDao
+import dev.m13d.wht.framework.datasource.cache.model.HolydayCacheEntity
 
 class HolydayDaoServiceImpl
 constructor(

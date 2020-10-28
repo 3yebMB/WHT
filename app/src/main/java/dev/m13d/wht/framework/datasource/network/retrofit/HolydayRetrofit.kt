@@ -1,6 +1,6 @@
-package dev.m13d.wht.datasource.network.retrofit
+package dev.m13d.wht.framework.datasource.network.retrofit
 
-import dev.m13d.wht.datasource.network.model.HolydayNetworkEntity
+import dev.m13d.wht.framework.datasource.network.model.HolydayNetworkEntity
 import retrofit2.http.GET
 
 interface HolydayRetrofit {

@@ -1,10 +1,10 @@
-package dev.m13d.wht.datasource.cache.database
+package dev.m13d.wht.framework.datasource.cache.database
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import dev.m13d.wht.datasource.cache.model.HolydayCacheEntity
+import dev.m13d.wht.framework.datasource.cache.model.HolydayCacheEntity
 
 @Dao
 interface HolydayDao {

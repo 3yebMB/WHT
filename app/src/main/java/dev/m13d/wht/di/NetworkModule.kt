@@ -8,8 +8,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dev.m13d.wht.business.domain.model.Holyday
 import dev.m13d.wht.business.domain.util.EntityMapper
-import dev.m13d.wht.datasource.network.mapper.NetworkMapper
-import dev.m13d.wht.datasource.network.model.HolydayNetworkEntity
+import dev.m13d.wht.framework.datasource.network.mapper.NetworkMapper
+import dev.m13d.wht.framework.datasource.network.model.HolydayNetworkEntity
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton

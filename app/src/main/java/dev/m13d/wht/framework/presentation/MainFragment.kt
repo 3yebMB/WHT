@@ -1,4 +1,4 @@
-package dev.m13d.wht.presentation
+package dev.m13d.wht.framework.presentation
 
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +12,7 @@ import dev.m13d.wht.business.domain.model.Holyday
 import dev.m13d.wht.business.domain.state.DataState
 import dev.m13d.wht.databinding.FragmentMainBinding
 import java.lang.StringBuilder
-import dev.m13d.wht.presentation.MainStateEvent.*
+import dev.m13d.wht.framework.presentation.MainStateEvent.*
 
 @AndroidEntryPoint
 class MainFragment

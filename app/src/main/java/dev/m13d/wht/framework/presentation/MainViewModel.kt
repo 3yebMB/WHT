@@ -1,4 +1,4 @@
-package dev.m13d.wht.presentation
+package dev.m13d.wht.framework.presentation
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
@@ -7,7 +7,7 @@ import dev.m13d.wht.business.domain.model.Holyday
 import dev.m13d.wht.business.domain.state.DataState
 import dev.m13d.wht.business.interactor.GetHolydays
 import kotlinx.coroutines.launch
-import dev.m13d.wht.presentation.MainStateEvent.*
+import dev.m13d.wht.framework.presentation.MainStateEvent.*
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 

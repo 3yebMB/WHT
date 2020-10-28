@@ -1,8 +1,8 @@
 package dev.m13d.wht.business.data.cache
 
 import dev.m13d.wht.business.domain.model.Holyday
-import dev.m13d.wht.datasource.cache.HolydayDaoService
-import dev.m13d.wht.datasource.cache.mapper.CacheMapper
+import dev.m13d.wht.framework.datasource.cache.HolydayDaoService
+import dev.m13d.wht.framework.datasource.cache.mapper.CacheMapper
 
 class CacheDataSourceImpl
 constructor(

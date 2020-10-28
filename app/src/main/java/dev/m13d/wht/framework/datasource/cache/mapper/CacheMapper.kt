@@ -1,7 +1,7 @@
-package dev.m13d.wht.datasource.cache.mapper
+package dev.m13d.wht.framework.datasource.cache.mapper
 
 import dev.m13d.wht.business.domain.model.Holyday
-import dev.m13d.wht.datasource.cache.model.HolydayCacheEntity
+import dev.m13d.wht.framework.datasource.cache.model.HolydayCacheEntity
 import dev.m13d.wht.business.domain.util.EntityMapper
 import javax.inject.Inject
 

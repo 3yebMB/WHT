@@ -1,4 +1,4 @@
-package dev.m13d.wht.presentation
+package dev.m13d.wht.framework.presentation
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory

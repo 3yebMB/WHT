@@ -1,4 +1,4 @@
-package dev.m13d.wht.cache.model
+package dev.m13d.wht.datasource.cache.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

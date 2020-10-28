@@ -1,4 +1,4 @@
-package dev.m13d.wht.domain.util
+package dev.m13d.wht.business.domain.util
 
 interface EntityMapper<Entity, DomainModel> {
 

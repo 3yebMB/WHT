@@ -1,4 +1,4 @@
-package dev.m13d.wht.network.model
+package dev.m13d.wht.datasource.network.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

@@ -1,8 +1,8 @@
-package dev.m13d.wht.cache.database
+package dev.m13d.wht.datasource.cache.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import dev.m13d.wht.cache.model.HolydayCacheEntity
+import dev.m13d.wht.datasource.cache.model.HolydayCacheEntity
 
 @Database(entities = [HolydayCacheEntity::class], version = 1)
 abstract class HolydayDatabase: RoomDatabase() {

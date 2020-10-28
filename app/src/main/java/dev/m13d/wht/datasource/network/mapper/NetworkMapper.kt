@@ -1,8 +1,8 @@
-package dev.m13d.wht.network.mapper
+package dev.m13d.wht.datasource.network.mapper
 
 import dev.m13d.wht.business.domain.model.Holyday
-import dev.m13d.wht.domain.util.EntityMapper
-import dev.m13d.wht.network.model.HolydayNetworkEntity
+import dev.m13d.wht.business.domain.util.EntityMapper
+import dev.m13d.wht.datasource.network.model.HolydayNetworkEntity
 import javax.inject.Inject
 
 class NetworkMapper

@@ -2,10 +2,12 @@ package dev.m13d.wht.framework.datasource.cache.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "holydays")
 data class HolydayCacheEntity(
 
+    @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "date")
     var date: String,
 

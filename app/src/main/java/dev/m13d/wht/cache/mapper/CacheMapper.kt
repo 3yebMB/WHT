@@ -1,16 +1,14 @@
-package dev.m13d.wht.network.mapper
+package dev.m13d.wht.cache.mapper
 
 import dev.m13d.wht.business.domain.model.Holyday
+import dev.m13d.wht.cache.model.HolydayCacheEntity
 import dev.m13d.wht.domain.util.EntityMapper
-import dev.m13d.wht.network.model.HolydayNetworkEntity
 import javax.inject.Inject
 
-class NetworkMapper
-
+class CacheMapper
 @Inject
-constructor(): EntityMapper<HolydayNetworkEntity, Holyday> {
-
-    override fun mapFromEntity(entity: HolydayNetworkEntity): Holyday {
+constructor(): EntityMapper<HolydayCacheEntity, Holyday> {
+    override fun mapFromEntity(entity: HolydayCacheEntity): Holyday {
         return Holyday(
             date = entity.date,
             localName = entity.localName,
@@ -24,8 +22,8 @@ constructor(): EntityMapper<HolydayNetworkEntity, Holyday> {
         )
     }
 
-    override fun mapToEntity(domainModel: Holyday): HolydayNetworkEntity {
-        return HolydayNetworkEntity(
+    override fun mapToEntity(domainModel: Holyday): HolydayCacheEntity {
+        return HolydayCacheEntity(
             date = domainModel.date,
             localName = domainModel.localName,
             name = domainModel.name,
@@ -38,8 +36,7 @@ constructor(): EntityMapper<HolydayNetworkEntity, Holyday> {
         )
     }
 
-    fun mapFromEntityList(entities: List<HolydayNetworkEntity>): List<Holyday> {
+    fun mapFromEntityList(entities: List<HolydayCacheEntity>): List<Holyday> {
         return entities.map { mapFromEntity(it) }
     }
-
 }

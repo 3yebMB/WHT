@@ -58,10 +58,10 @@ object CacheModule {
     @Singleton
     @Provides
     fun provideCacheDataSource(
-        blogDaoService: HolydayDaoService,
+        holydayDaoService: HolydayDaoService,
         cacheMapper: CacheMapper
     ): CacheDataSource {
-        return CacheDataSourceImpl(blogDaoService, cacheMapper)
+        return CacheDataSourceImpl(holydayDaoService, cacheMapper)
     }
 
 

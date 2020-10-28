@@ -15,7 +15,7 @@ object InteractorsModule {
 
     @Singleton
     @Provides
-    fun provideGetBlogs(
+    fun provideGetHolydays(
         cacheDataSource: CacheDataSource,
         networkDataSource: NetworkDataSource
     ): GetHolydays{

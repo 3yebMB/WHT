@@ -39,7 +39,7 @@ constructor(
             when(dataState){
                 is DataState.Success<List<Holyday>> -> {
                     displayProgressBar(false)
-                    appendBlogTitles(dataState.data)
+                    appendHolydayTitles(dataState.data)
                 }
                 is DataState.Error -> {
                     displayProgressBar(false)
@@ -56,7 +56,7 @@ constructor(
         if(message != null) binding.text.text = message else binding.text.text = "Unknown error."
     }
 
-    private fun appendBlogTitles(holydays: List<Holyday>){
+    private fun appendHolydayTitles(holydays: List<Holyday>){
         val sb = StringBuilder()
         for(holyday in holydays){
             sb.append(holyday.localName + "\n")

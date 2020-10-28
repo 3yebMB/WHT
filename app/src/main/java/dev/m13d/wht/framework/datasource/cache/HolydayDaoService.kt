@@ -4,7 +4,7 @@ import dev.m13d.wht.framework.datasource.cache.model.HolydayCacheEntity
 
 interface HolydayDaoService {
 
-    suspend fun insert(blogEntity: HolydayCacheEntity): Long
+    suspend fun insert(holydayEntity: HolydayCacheEntity): Long
 
     suspend fun get(): List<HolydayCacheEntity>
 }

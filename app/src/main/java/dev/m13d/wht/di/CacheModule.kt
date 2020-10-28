@@ -7,12 +7,16 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dev.m13d.wht.business.data.cache.CacheDataSource
+import dev.m13d.wht.business.data.cache.CacheDataSourceImpl
 import dev.m13d.wht.business.domain.model.Holyday
 import dev.m13d.wht.datasource.cache.database.HolydayDao
 import dev.m13d.wht.datasource.cache.database.HolydayDatabase
 import dev.m13d.wht.datasource.cache.mapper.CacheMapper
 import dev.m13d.wht.datasource.cache.model.HolydayCacheEntity
 import dev.m13d.wht.business.domain.util.EntityMapper
+import dev.m13d.wht.datasource.cache.HolydayDaoService
+import dev.m13d.wht.datasource.cache.HolydayDaoServiceImpl
 import javax.inject.Singleton
 
 @Module
@@ -27,7 +31,7 @@ object CacheModule {
 
     @Singleton
     @Provides
-    fun provideBlogDb(@ApplicationContext context: Context): HolydayDatabase {
+    fun provideHolydayDb(@ApplicationContext context: Context): HolydayDatabase {
         return Room
             .databaseBuilder(
                 context,
@@ -39,24 +43,24 @@ object CacheModule {
 
     @Singleton
     @Provides
-    fun provideBlogDAO(blogDatabase: HolydayDatabase): HolydayDao {
-        return blogDatabase.holydayDao()
+    fun provideHolydayDAO(holydayDatabase: HolydayDatabase): HolydayDao {
+        return holydayDatabase.holydayDao()
     }
 
     @Singleton
     @Provides
-    fun provideBlogDaoService(
-        blogDao: HolydayDao
-    ):BlogDaoService{
-        return BlogDaoServiceImpl(blogDao)
+    fun provideHolydayDaoService(
+        holydayDao: HolydayDao
+    ): HolydayDaoService {
+        return HolydayDaoServiceImpl(holydayDao)
     }
 
     @Singleton
     @Provides
     fun provideCacheDataSource(
-        blogDaoService: BlogDaoService,
+        blogDaoService: HolydayDaoService,
         cacheMapper: CacheMapper
-    ): CacheDataSource{
+    ): CacheDataSource {
         return CacheDataSourceImpl(blogDaoService, cacheMapper)
     }
 

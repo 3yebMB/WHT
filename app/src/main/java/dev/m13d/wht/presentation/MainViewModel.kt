@@ -2,13 +2,14 @@ package dev.m13d.wht.presentation
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.SavedStateHandle
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 import dev.m13d.wht.business.domain.model.Holyday
 import dev.m13d.wht.business.domain.state.DataState
 import dev.m13d.wht.business.interactor.GetHolydays
+import kotlinx.coroutines.launch
+import dev.m13d.wht.presentation.MainStateEvent.*
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 
 class MainViewModel
 @ViewModelInject
@@ -25,12 +26,15 @@ constructor(
     fun setStateEvent(mainStateEvent: MainStateEvent){
         viewModelScope.launch {
             when(mainStateEvent){
-                is GetBlogsEvent -> {
+                is GetHolydaysEvent -> {
                     getHolydays.execute()
                         .onEach {dataState ->
                             _dataState.value = dataState
                         }
                         .launchIn(viewModelScope)
+                }
+                is None -> {
+                    //
                 }
             }
         }
@@ -39,7 +43,7 @@ constructor(
 
 sealed class MainStateEvent{
 
-    object GetBlogsEvent: MainStateEvent()
+    object GetHolydaysEvent: MainStateEvent()
 
     object None: MainStateEvent()
 }

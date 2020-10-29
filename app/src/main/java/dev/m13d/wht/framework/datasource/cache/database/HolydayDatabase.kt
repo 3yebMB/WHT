@@ -4,7 +4,7 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import dev.m13d.wht.framework.datasource.cache.model.HolydayCacheEntity
 
-@Database(entities = [HolydayCacheEntity::class], version = 1)
+@Database(entities = [HolydayCacheEntity::class], version = 2)
 abstract class HolydayDatabase: RoomDatabase() {
     abstract fun holydayDao(): HolydayDao
 

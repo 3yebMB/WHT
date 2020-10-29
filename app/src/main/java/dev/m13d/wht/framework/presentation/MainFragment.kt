@@ -13,6 +13,7 @@ import dev.m13d.wht.business.domain.state.DataState
 import dev.m13d.wht.databinding.FragmentMainBinding
 import java.lang.StringBuilder
 import dev.m13d.wht.framework.presentation.MainStateEvent.*
+import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
@@ -26,7 +27,7 @@ constructor(
 
     private val viewModel: MainViewModel by viewModels()
 
-    private lateinit var binding: FragmentMainBinding
+//    private lateinit var binding: FragmentMainBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -55,18 +56,19 @@ constructor(
     }
 
     private fun displayError(message: String?){
-        if(message != null) binding.text.text = message else binding.text.text = "Unknown error."
+        if(message != null) textV.text = message else textV.text = "Unknown error."
     }
 
     private fun appendHolydayTitles(holydays: List<Holyday>){
         val sb = StringBuilder()
         for(holyday in holydays){
-            sb.append(holyday.localName + "\n")
+            sb.append(holyday.date + "\n")
+            sb.append("\t ${holyday.localName} \n")
         }
-        binding.text.text = sb.toString()
+        textV.text = sb.toString()
     }
 
     private fun displayProgressBar(isDisplayed: Boolean){
-        binding.progressBar.visibility = if(isDisplayed) View.VISIBLE else View.GONE
+        progressBar.visibility = if(isDisplayed) View.VISIBLE else View.GONE
     }
 }

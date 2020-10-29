@@ -8,9 +8,11 @@ import dev.m13d.wht.business.domain.state.DataState
 import dev.m13d.wht.business.interactor.GetHolydays
 import kotlinx.coroutines.launch
 import dev.m13d.wht.framework.presentation.MainStateEvent.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
+@ExperimentalCoroutinesApi
 class MainViewModel
 @ViewModelInject
 constructor(

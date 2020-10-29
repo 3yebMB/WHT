@@ -29,9 +29,9 @@ data class HolydayNetworkEntity(
     @SerializedName("global")
     val global: Boolean,
 
-    @Expose
-    @SerializedName("counties")
-    val counties: List<String>,
+//    @Expose
+//    @SerializedName("counties")
+//    val counties: List<String>,
 
     @Expose
     @SerializedName("launchYear")

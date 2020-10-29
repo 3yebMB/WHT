@@ -63,6 +63,4 @@ object CacheModule {
     ): CacheDataSource {
         return CacheDataSourceImpl(holydayDaoService, cacheMapper)
     }
-
-
 }

@@ -26,8 +26,8 @@ data class HolydayCacheEntity(
     @ColumnInfo(name = "global")
     var global: Boolean,
 
-    @ColumnInfo(name = "counties")
-    var counties: List<String>,
+//    @ColumnInfo(name = "counties")
+//    var counties: List<String>,
 
     @ColumnInfo(name = "launchYear")
     var launchYear: Int,

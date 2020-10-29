@@ -18,7 +18,7 @@ constructor(): EntityMapper<HolydayNetworkEntity, Holyday> {
             countryCode = entity.countryCode,
             fixed = entity.fixed,
             global = entity.global,
-            counties = entity.counties,
+//            counties = entity.counties,
             launchYear = entity.launchYear,
             type = entity.type
         )
@@ -32,7 +32,7 @@ constructor(): EntityMapper<HolydayNetworkEntity, Holyday> {
             countryCode = domainModel.countryCode,
             fixed = domainModel.fixed,
             global = domainModel.global,
-            counties = domainModel.counties,
+//            counties = domainModel.counties,
             launchYear = domainModel.launchYear,
             type = domainModel.type
         )

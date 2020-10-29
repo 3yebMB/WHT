@@ -9,6 +9,6 @@ constructor(
 ): HolydayRetrofitService {
 
     override suspend fun get(): List<HolydayNetworkEntity> {
-        return holydayRetrofit.getHolyday()
+        return holydayRetrofit.get()
     }
 }

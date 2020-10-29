@@ -6,6 +6,6 @@ import retrofit2.http.GET
 interface HolydayRetrofit {
 
     @GET("PublicHolidays/2020/RU")
-    suspend fun getHolyday(): List<HolydayNetworkEntity>
+    suspend fun get(): List<HolydayNetworkEntity>
 
 }

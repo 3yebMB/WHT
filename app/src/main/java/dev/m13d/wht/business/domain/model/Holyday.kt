@@ -7,7 +7,7 @@ data class Holyday(
     var countryCode: String,
     var fixed: Boolean,
     var global: Boolean,
-    var counties: List<String>,
+//    var counties: List<String>,
     var launchYear: Int,
     var type: String,
 )

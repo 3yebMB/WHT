@@ -8,8 +8,8 @@ constructor(
     private val holydayDao: HolydayDao
 ): HolydayDaoService {
 
-    override suspend fun insert(holydayCacheEntity: HolydayCacheEntity): Long {
-        return holydayDao.insert(holydayCacheEntity)
+    override suspend fun insert(holydayEntity: HolydayCacheEntity): Long {
+        return holydayDao.insert(holydayEntity)
     }
 
     override suspend fun get(): List<HolydayCacheEntity> {

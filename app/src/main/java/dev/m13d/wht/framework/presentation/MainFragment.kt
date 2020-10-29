@@ -13,7 +13,9 @@ import dev.m13d.wht.business.domain.state.DataState
 import dev.m13d.wht.databinding.FragmentMainBinding
 import java.lang.StringBuilder
 import dev.m13d.wht.framework.presentation.MainStateEvent.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalCoroutinesApi
 @AndroidEntryPoint
 class MainFragment
 constructor(
@@ -26,7 +28,7 @@ constructor(
 
     private lateinit var binding: FragmentMainBinding
 
-            override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         subscribeObservers()
         viewModel.setStateEvent(GetHolydaysEvent)

@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'kotlin-android-extensions'
+//    id 'kotlin-android-extensions'
     id 'dagger.hilt.android.plugin'
 }
 
@@ -36,10 +36,10 @@ android {
 
     buildFeatures {
         // for data binding:
-//        dataBinding = true
+//        dataBinding true
 
         // for view binding:
-         viewBinding = true
+         viewBinding true
     }
 
     configurations.all {

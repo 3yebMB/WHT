@@ -1,8 +1,9 @@
 package dev.m13d.wht.framework.presentation
 
 import android.os.Bundle
-import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -10,10 +11,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import dev.m13d.wht.R
 import dev.m13d.wht.business.domain.model.Holyday
 import dev.m13d.wht.business.domain.state.DataState
-import dev.m13d.wht.databinding.FragmentMainBinding
-import java.lang.StringBuilder
 import dev.m13d.wht.framework.presentation.MainStateEvent.*
-import kotlinx.android.synthetic.main.fragment_main.*
+import dev.m13d.wht.databinding.FragmentMainBinding
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
@@ -27,14 +26,28 @@ constructor(
 
     private val viewModel: MainViewModel by viewModels()
 
-//    private lateinit var binding: FragmentMainBinding
+    private var _binding: FragmentMainBinding? = null
+
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         subscribeObservers()
         viewModel.setStateEvent(GetHolydaysEvent)
+    }
 
-        Log.d(TAG, "someString: ${someString}")
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun subscribeObservers(){
@@ -56,7 +69,7 @@ constructor(
     }
 
     private fun displayError(message: String?){
-        if(message != null) textV.text = message else textV.text = "Unknown error."
+        if(message != null) binding.textV.text = message else binding.textV.text = "Unknown error."
     }
 
     private fun appendHolydayTitles(holydays: List<Holyday>){
@@ -65,10 +78,10 @@ constructor(
             sb.append(holyday.date + "\n")
             sb.append("\t ${holyday.localName} \n")
         }
-        textV.text = sb.toString()
+        binding.textV.text = sb.toString()
     }
 
     private fun displayProgressBar(isDisplayed: Boolean){
-        progressBar.visibility = if(isDisplayed) View.VISIBLE else View.GONE
+        binding.progressBar.visibility = if(isDisplayed) View.VISIBLE else View.GONE
     }
 }

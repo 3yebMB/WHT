@@ -69,7 +69,7 @@ constructor(
     }
 
     private fun displayError(message: String?){
-        if(message != null) binding.textV.text = message else binding.textV.text = "Unknown error."
+        if(message != null) binding.textV.text = message else binding.textV.text = getString(R.string.unknown_error)
     }
 
     private fun appendHolydayTitles(holydays: List<Holyday>){

@@ -8,6 +8,10 @@ constructor(
     private val holydayRetrofit: HolydayRetrofit
 ): HolydayRetrofitService {
 
+    override suspend fun getCountries(): HashMap<String, String> {
+        return holydayRetrofit.getCountries()
+    }
+
     override suspend fun get(): List<HolydayNetworkEntity> {
         return holydayRetrofit.get()
     }

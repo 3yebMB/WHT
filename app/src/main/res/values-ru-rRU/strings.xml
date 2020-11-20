@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">WHT</string>
     <string name="description">Какой сегодня праздник?</string>
+    <string name="unknown_error">Не известная ошибка</string>
 </resources>

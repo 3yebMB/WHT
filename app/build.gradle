@@ -63,7 +63,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
 
     // Dagger Hilt
-    def hilt_version = '2.29.1-alpha'
+    def hilt_version = '2.30-alpha'
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 

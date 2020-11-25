@@ -17,9 +17,9 @@ data class HolydayNetworkEntity(
     @SerializedName("name")
     val name: String,
 
-    @Expose
-    @SerializedName("countryCode")
-    val countryCode: String,
+//    @Expose
+//    @SerializedName("countryCode")
+//    val countryCode: String,
 
     @Expose
     @SerializedName("fixed")

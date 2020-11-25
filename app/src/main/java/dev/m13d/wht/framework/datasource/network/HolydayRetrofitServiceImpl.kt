@@ -1,5 +1,6 @@
 package dev.m13d.wht.framework.datasource.network
 
+import dev.m13d.wht.framework.datasource.network.model.CountryNetworkEntity
 import dev.m13d.wht.framework.datasource.network.model.HolydayNetworkEntity
 import dev.m13d.wht.framework.datasource.network.retrofit.HolydayRetrofit
 
@@ -8,7 +9,7 @@ constructor(
     private val holydayRetrofit: HolydayRetrofit
 ): HolydayRetrofitService {
 
-    override suspend fun getCountries(): HashMap<String, String> {
+    override suspend fun getCountries(): List<CountryNetworkEntity> {
         return holydayRetrofit.getCountries()
     }
 

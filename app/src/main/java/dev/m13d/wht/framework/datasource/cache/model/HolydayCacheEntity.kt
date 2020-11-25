@@ -17,8 +17,8 @@ data class HolydayCacheEntity(
     @ColumnInfo(name = "name")
     var name: String,
 
-    @ColumnInfo(name = "countryCode")
-    var countryCode: String,
+//    @ColumnInfo(name = "countryCode")
+//    var countryCode: String,
 
     @ColumnInfo(name = "fixed")
     var fixed: Boolean,
